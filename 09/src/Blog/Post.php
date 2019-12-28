@@ -1,7 +1,7 @@
 <?php
 
-namespace Blog;
-use User\User as GeneralUser;
+namespace App\Blog;
+use App\User\User as GeneralUser;
 
 class Post implements PostInterface
 {

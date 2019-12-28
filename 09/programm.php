@@ -7,18 +7,21 @@ require "./src/Forum/Post.php"; */
 
 function autoload($className)
 {
-  $className = str_replace("\\", "/", $className);
-  if (file_exists("./src/{$className}.php")) {
-    require "./src/{$className}.php";
+  $prefix = "App";
+  $dir = "./src";
+  $clss = substr($className, strlen($prefix));
+  $clss = str_replace("\\", "/", $clss);
+  if (file_exists("{$dir}{$clss}.php")) {
+    require "{$dir}{$clss}.php";
   }
 }
 
 spl_autoload_register("autoload");
 
-$post = new Blog\Post();
+$post = new App\Blog\Post();
 var_dump($post);
 
-$post = new Forum\Post();
+$post = new App\Forum\Post();
 var_dump($post);
 
 
