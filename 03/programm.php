@@ -1,0 +1,30 @@
+<?php
+$size = 1.85;
+$weight = 95;
+echo ($weight / ($size * $size)) . "\n";
+$name = 'Willy';
+echo 'Hallo, ' . $name . '!' . "\n";
+echo "Hallo, $name!" . "<br />";
+echo "Hallo, {$name}!" . "\n";
+echo strlen($name) . "\n";
+var_dump($name) . "\n";
+var_dump(123) . "\n";
+var_dump(123.3) . "\n";
+$name = (false || true);
+var_dump($name);
+$name = (false && true);
+var_dump($name);
+$name = "";
+var_dump(empty($name));
+$name = "0";
+var_dump(empty($name));
+$name = 0;
+var_dump(empty($name));
+$name = "1000";
+var_dump(empty($name));
+$name = "";
+var_dump(isset($name));
+var_dump(isset($name2));
+unset($name);
+var_dump(isset($name));
+
